@@ -25,6 +25,22 @@ class KeyboardViewController: UIInputViewController {
         loadInterface()
     }
 
+    @IBAction func goBearsAction(sender: UIButton) {
+        self.textDocumentProxy.insertText("-Go Bears!!-")
+    }
+    
+    @IBAction func VianasAction(sender: UIButton) {
+        self.textDocumentProxy.insertText("-Cal is better than " + sender.currentTitle! + "-")
+    }
+    
+    @IBAction func returnAction(sender: UIButton) {
+        self.textDocumentProxy.insertText("\n")
+    }
+    
+    @IBAction func backAction(sender: UIButton) {
+        self.textDocumentProxy.deleteBackward()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated
